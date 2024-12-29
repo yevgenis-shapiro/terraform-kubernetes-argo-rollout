@@ -18,10 +18,6 @@ Rollouts (optionally) integrates with ingress controllers and service meshes, le
 ✅ Metric provider integration: Prometheus, Wavefront, Kayenta, Web, Kubernetes Jobs
 ```
 
-🚀 
-
-Technologies that we use here for module creation : Kubernetes & Terraform and Argo Rollouts
-
 
 🔨 Example : Config
 
@@ -66,3 +62,6 @@ spec:
       - setWeight: 80
       - pause: {duration: 10}
 ```
+🚀 
+
+Technologies that we use here for module creation : Kubernetes & Terraform and Argo Rollouts
