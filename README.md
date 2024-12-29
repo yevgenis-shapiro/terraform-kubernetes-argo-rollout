@@ -64,7 +64,7 @@ spec:
 
 ---
 
-###-Blue-Green
+###-Blue-Green Release
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
