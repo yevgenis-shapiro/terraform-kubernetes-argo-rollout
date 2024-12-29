@@ -23,9 +23,8 @@ Rollouts (optionally) integrates with ingress controllers and service meshes, le
 Technologies that we use here for module creation : Kubernetes & Terraform and Argo Rollouts
 
 
-🔨 Example :
+🔨 Example : Config
 
-## Config 
 ```
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
