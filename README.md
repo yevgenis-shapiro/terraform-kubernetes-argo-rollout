@@ -1,9 +1,9 @@
 ![image-20-1024x789](https://github.com/user-attachments/assets/efe391a2-6840-44b8-b87b-c9deba242e73)
 
  
-## Terraform Module - Argo Rollouts | ⭐⭐⭐ 
+## Terraform Module - Argo Rollouts | 🚀🚀🚀 
 Argo Rollouts is a Kubernetes controller and set of CRDs which provide advanced deployment capabilities such as blue-green, canary, canary analysis, experimentation, and progressive delivery features to Kubernetes.
-Rollouts (optionally) integrates with ingress controllers and service meshes, leveraging their traffic shaping abilities to gradually shift traffic to the new version during an update. Additionally, Rollouts can query and interpret metrics from various providers to verify key KPIs and drive automated promotion or rollback during an update.
+Rollouts integrates with ingress controllers and service meshes, leveraging their traffic shaping abilities to gradually shift traffic to the new version during an update. Additionally, Rollouts can query and interpret metrics from various providers to verify key KPIs and drive automated promotion or rollback during an update.
 
 🎯 Features
 ```
@@ -17,7 +17,6 @@ Rollouts (optionally) integrates with ingress controllers and service meshes, le
 ✅ Service Mesh integration: Istio, Linkerd, SMI
 ✅ Metric provider integration: Prometheus, Wavefront, Kayenta, Web, Kubernetes Jobs
 ```
-
 
 🔨 Example : Config
 
@@ -62,6 +61,3 @@ spec:
       - setWeight: 80
       - pause: {duration: 10}
 ```
-🚀 
-
-Technologies that we use here for module creation : Kubernetes & Terraform and Argo Rollouts
