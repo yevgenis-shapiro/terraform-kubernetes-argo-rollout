@@ -23,9 +23,9 @@ Rollouts (optionally) integrates with ingress controllers and service meshes, le
 Technologies that we use here for module creation : Kubernetes & Terraform and Argo Rollouts
 
 
-🔨 Example : Config 
+🔨 Example :
 
-## AWS
+## Config 
 ```
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
@@ -40,7 +40,7 @@ spec:
   template:
     metadata:
       labels:
-        app: canary-demo
+        app: canary
     spec:
       containers:
       - name: canary
