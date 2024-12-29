@@ -21,6 +21,7 @@ Rollouts integrates with ingress controllers and service meshes, leveraging thei
 🔨 Example : Config
 
 ```
+###-Canary Release
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
@@ -60,4 +61,42 @@ spec:
       - pause: {duration: 10}
       - setWeight: 80
       - pause: {duration: 10}
+
+---
+
+###-Blue-Green
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: bluegreen
+  labels:
+    app: bluegreen
+spec:
+  replicas: 3
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      app: bluegreen
+  template:
+    metadata:
+      labels:
+        app: bluegreen
+    spec:
+      containers:
+      - name: bluegreen
+        image: argoproj/rollouts-demo:blue
+        imagePullPolicy: Always
+        ports:
+        - name: http
+          containerPort: 8080
+          protocol: TCP
+        resources:
+          requests:
+            memory: 32Mi
+            cpu: 5m
+  strategy:
+    blueGreen:
+      autoPromotionEnabled: false
+      activeService: bluegreen
+      previewService: bluegreen-preview
 ```
