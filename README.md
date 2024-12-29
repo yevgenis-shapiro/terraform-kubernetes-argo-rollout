@@ -18,11 +18,52 @@ Rollouts (optionally) integrates with ingress controllers and service meshes, le
 ✅ Metric provider integration: Prometheus, Wavefront, Kayenta, Web, Kubernetes Jobs
 ```
 
-⚙️ Installation
-
-How to launch  : 
-
 🚀 
 
 Technologies that we use here for module creation : Kubernetes & Terraform and Argo Rollouts
 
+
+🔨 Example : Config 
+
+## AWS
+```
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: canary
+spec:
+  replicas: 5
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      app: canary
+  template:
+    metadata:
+      labels:
+        app: canary-demo
+    spec:
+      containers:
+      - name: canary
+        image: argoproj/rollouts-demo:blue
+        imagePullPolicy: Always
+        ports:
+        - name: http
+          containerPort: 8080
+          protocol: TCP
+        resources:
+          requests:
+            memory: 32Mi
+            cpu: 5m
+  strategy:
+    canary:
+      canaryService: canary-preview
+      steps:
+      - setWeight: 20
+      - pause: {}
+      - setWeight: 40
+      - pause: {duration: 10}
+      - setWeight: 60
+      - pause: {duration: 10}
+      - setWeight: 80
+      - pause: {duration: 10}
+```
