@@ -5,7 +5,7 @@
 Argo Rollouts is a Kubernetes controller and set of CRDs which provide advanced deployment capabilities such as blue-green, canary, canary analysis, experimentation, and progressive delivery features to Kubernetes.
 Rollouts (optionally) integrates with ingress controllers and service meshes, leveraging their traffic shaping abilities to gradually shift traffic to the new version during an update. Additionally, Rollouts can query and interpret metrics from various providers to verify key KPIs and drive automated promotion or rollback during an update.
 
-Features
+🎯 Features
 ```
 ✅ Blue-Green update strategy
 ✅ Canary update strategy
@@ -18,11 +18,11 @@ Features
 ✅ Metric provider integration: Prometheus, Wavefront, Kayenta, Web, Kubernetes Jobs
 ```
 
-🎯 Installation
+⚙️ Installation
 
 How to launch  : 
 
 🚀 
 
-Technologies that we use here for module creation : Terraform & Argo Rollouts
+Technologies that we use here for module creation : Kubernetes & Terraform and Argo Rollouts
 
