@@ -1,3 +1,5 @@
+![rollouts-thumbnail](https://github.com/user-attachments/assets/f94bfe2f-163d-43b5-9862-b7ec969517a2)
+
 ![image-20-1024x789](https://github.com/user-attachments/assets/efe391a2-6840-44b8-b87b-c9deba242e73)
 
  
